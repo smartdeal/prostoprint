@@ -1,0 +1,42 @@
+.b-gallery-imgs_examples {
+    margin-bottom: 50px;
+    .b-gallery-imgs {
+        &__item {
+            @include mn768 {
+                width: 25%;
+                overflow: hidden;
+                max-height: 200px;
+                transition: max-height .5s 0s;
+                padding: 5px;
+                &.is-hidden {
+                    max-height: 0;
+                    padding: 0;
+                }
+            }
+        }
+        &__img {
+            height: 170px;
+            background-size: contain;
+        }
+    }
+}
+
+.btn_imgs-more {
+    font-size: 13px;
+    position: relative;
+    padding: 15px 40px 15px 24px;
+    margin: 20px auto 0;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    max-width: 260px;
+    &::after {
+        content: '+';
+        position: absolute;
+        transition: all .5s 0s;
+        top: 10px;
+        right: 15px;
+        font-size: 24px;
+        font-family: serif;
+    }
+}

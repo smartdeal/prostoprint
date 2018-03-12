@@ -1,0 +1,86 @@
+.b-terms {
+    &__title {
+        display: block;
+        margin-bottom: 30px;
+        font-size: 26px;
+    }
+    &__item {
+        margin: 30px 0;
+        &:nth-child(even) {
+            .b-terms__icon {
+                background-color: #f2f2f2;
+                background-image: linear-gradient(to top, #2b2d2e 0%, #414445 100%);
+            }
+        }
+    }
+
+    &__desc {
+        font-size: 0;
+    }
+
+    &__icon {
+        display: none;
+        width: 150px;
+        height: 150px;
+        background-color: #f2f2f2;
+        background-image: linear-gradient(to top, #be2b31 0%, #df333a 100%);
+        border-radius: 5px;
+        @include mn768 {
+            display: inline-block;
+            vertical-align: top;
+        }
+    }
+
+    &__txt {
+        font-size: 17px;
+        @include mn768 {
+            width: calc(100% - 217px);
+            display: inline-block;
+            vertical-align: top;
+            padding-left: 30px;
+        }
+        a {
+            @include link-blue;
+            font-weight: 700;
+        }
+        ul {
+            margin: 0;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        p {
+            margin-bottom: 10px;
+        }
+    }
+}
+
+#tablepress-2 {
+    @include mn768 {
+        font-size: 18px;
+    }
+    td {
+        text-align: center;
+        @include mn768 {
+            padding: 10px 20px;
+        }
+        &.column-1 {
+            text-align: left;
+        }
+    }
+
+    .odd td {
+        background-color: transparent;
+    }
+
+    .even td {
+        background: #f0f3f5;
+        border: 0;
+        font-weight: 700;
+    }
+}
+
+.b-text-blue_terms {
+    border-radius: 10px;
+    font-size: 18px;
+}

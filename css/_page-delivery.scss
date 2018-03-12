@@ -1,0 +1,101 @@
+.content_delivery {
+    .content__title {
+        color: $color1;
+        font-weight: 900;
+    }
+}
+
+.b-bullet_delivery {
+    background: #f2f2f2;
+    padding: 30px 0;
+    margin-top: 0;
+    .b-bullet {
+        &__item {
+            @include mn768 {
+                width: 33.33%;
+            }
+        }
+        &__item_1 .b-bullet__img {
+            width: 53px;
+            height: 53px;
+            background-position: 0 -104px;
+        }
+        &__item_2 .b-bullet__img {
+            width: 53px;
+            height: 53px;
+            background-position: -53px -104px;
+        }
+        &__item_3 .b-bullet__img {
+            width: 59px;
+            height: 45px;
+            background-position: -106px -104px;
+        }
+        &__img-wrap{
+            width: 112px;
+    height: 112px;
+        }
+    }
+}
+
+.b-delivery-services {
+    margin: 50px 0;
+    &__items {
+        font-size: 0;
+    }
+    &__item {
+        padding: 20px 0;
+        @include mn768 {
+            width: 50%;
+            display: inline-block;
+            vertical-align: top;
+        }
+        &:nth-child(4n+1),
+        &:nth-child(4n+2) {
+            background: #f2f2f2;
+        }
+    }
+    &__img {
+        display: inline-block;
+        vertical-align: middle;
+        width: 50%;
+        padding: 0 5%;
+    }
+    &__desc {
+        display: inline-block;
+        vertical-align: middle;
+        line-height: 1.4;
+        font-size: 18px;
+        width: 50%;
+        overflow: hidden;
+    }
+    &__name {
+        font-weight: 700;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    &__tel {
+        font-size: 16px;
+        color: $color1;
+    }
+    &__link {
+        display: block;
+        color: $color1;
+        text-decoration: underline;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+.b-benefits {
+    margin: 50px 0;
+    .title-line {
+        font-weight: 700;
+    }
+}
+
+.b-text-blue_delivery + hr {
+    margin: 50px 0;
+}

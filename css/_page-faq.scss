@@ -1,0 +1,21 @@
+.b-accord_faq {
+    margin-bottom: 50px;
+    border-bottom: 2px solid #f2f2f2;
+    padding-bottom: 20px;
+}
+
+.content_faq {
+    .content__title {
+        font-weight: 900;
+        span {
+            font-weight: 400;
+        }
+    }
+    .content-block_faq {
+        font-size: 18px;
+        background: #414445;
+        border-radius: 3px;
+        color: white;
+        padding: 25px;
+    }
+}

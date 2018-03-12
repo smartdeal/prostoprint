@@ -1,0 +1,183 @@
+@charset "UTF-8";
+.f-ui-form_mega {
+    p {
+        margin: 0 !important;
+    }
+    .f-row {
+        margin: 20px 0;
+        background: #f0f3f5;
+        padding: 20px;
+        @include mn768 {
+            padding: 30px;
+        }
+        &_title {
+            background: white;
+            padding: 0;
+        }
+    }
+    .b-mega-caption {
+        font-size: 22px;
+        font-weight: 700;
+        margin-bottom: 20px;
+        color: $color1;
+    }
+    .b-mega-num {
+        margin-bottom: 20px;
+    }
+    .f-services,
+    .f-products {
+        .wpcf7-list-item {
+            @include mn768 {
+                display: inline-block;
+                vertical-align: middle;
+                width: 50%;
+                margin: 2px 0;
+            }
+        }
+        margin-bottom: 20px;
+    }
+    .f-print-size,
+    .f-print-place,
+    .f-print-whoose,
+    .f-print-quality,
+    .f-color,
+    .f-size,
+    .f-num-date {
+        position: relative;
+        padding: 30px 0;
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -30px;
+            right: -30px;
+            height: 1px;
+            background: white;
+        }
+    }
+    .f-color {
+        margin-bottom: 0;
+    }
+    .f-print-size,
+    .f-print-place,
+    .f-print-whoose,
+    .f-print-quality {
+        .wpcf7-list-item {
+            width: auto;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 20px;
+        }
+        .ui-checkboxradio-icon {
+            border-radius: 3px;
+            &:before {
+                left: 3px;
+                top: 3px;
+                border-radius: 3px;
+                right: 3px;
+                bottom: 3px;
+                width: auto;
+                height: auto;
+            }
+        }
+        .wpcf7-list-item-label {
+            padding-left: 7px;
+        }
+    }
+    .f-print-place {
+        .wpcf7-list-item {
+            margin-right: 0;
+        }
+    }
+    .f-color-radio {
+        max-width: none;
+        .wpcf7-list-item {
+            width: auto;
+        }
+    }
+    .f-size-radio {
+        max-width: none;
+    }
+    .f-num-date {
+        font-size: 0;
+    }
+    .f-num {
+        @include mn768 {
+            width: 40%;
+            margin-right: 10%;
+            display: inline-block;
+        }
+    }
+    .f-date {
+        @include mn768 {
+            margin-bottom: 0;
+            width: 50%;
+            display: inline-block;
+        }
+    }
+    .f-print-file .f-label {
+    	margin: 0;
+    }
+    .f-delivery-adr {
+    	margin-bottom: 20px;
+    }
+
+    .f-services {
+    	.wpcf7-list-item-label {
+    		padding-left: 30px;
+		    position: relative;
+		    &::before {
+		    	position: absolute;
+		    	left: 4px;
+		    }
+    	}
+    	.wpcf7-list-item:nth-child(1) .wpcf7-list-item-label {@extend .icon-menu-tshirt;}
+    	.wpcf7-list-item:nth-child(2) .wpcf7-list-item-label {@extend .icon-menu-sign;}
+    	.wpcf7-list-item:nth-child(3) .wpcf7-list-item-label {@extend .icon-menu-polo;}
+    	.wpcf7-list-item:nth-child(4) .wpcf7-list-item-label {@extend .icon-menu-sport;}
+    	.wpcf7-list-item:nth-child(5) .wpcf7-list-item-label {@extend .icon-menu-hoody;}
+    	.wpcf7-list-item:nth-child(6) .wpcf7-list-item-label {@extend .icon-menu-hat;}
+    	.wpcf7-list-item:nth-child(7) .wpcf7-list-item-label {@extend .icon-menu-swish;}
+    	.wpcf7-list-item:nth-child(8) .wpcf7-list-item-label {@extend .icon-menu-kaska;}
+    	.wpcf7-list-item:nth-child(9) .wpcf7-list-item-label {@extend .icon-menu-vetr;}
+    	.wpcf7-list-item:nth-child(10) .wpcf7-list-item-label {@extend .icon-menu-bag;}
+    	.wpcf7-list-item:nth-child(11) .wpcf7-list-item-label {@extend .icon-menu-polo;}
+    	.wpcf7-list-item:nth-child(12) .wpcf7-list-item-label {@extend .icon-menu-cap;}
+    	.wpcf7-list-item:nth-child(13) .wpcf7-list-item-label {@extend .icon-menu-fart;}
+    	.wpcf7-list-item:nth-child(14) .wpcf7-list-item-label {@extend .icon-menu-phone;}
+    	.wpcf7-list-item:nth-child(15) .wpcf7-list-item-label {@extend .icon-menu-spec;}
+    	.wpcf7-list-item:nth-child(16) .wpcf7-list-item-label {@extend .icon-menu-puzzle;}
+    }
+    .f-products {
+    	.wpcf7-list-item-label {
+    		padding-left: 30px;
+		    position: relative;
+		    &::before {
+		    	position: absolute;
+		    	left: 4px;
+		    }
+    	}
+    	.wpcf7-list-item:nth-child(1) .wpcf7-list-item-label {@extend .icon-menu-tshirt;}
+    	.wpcf7-list-item:nth-child(2) .wpcf7-list-item-label {@extend .icon-menu-vetr;}
+    	.wpcf7-list-item:nth-child(3) .wpcf7-list-item-label {@extend .icon-menu-tshirt;}
+    	.wpcf7-list-item:nth-child(4) .wpcf7-list-item-label {@extend .icon-menu-vetr;}
+    	.wpcf7-list-item:nth-child(5) .wpcf7-list-item-label {@extend .icon-menu-woman;}
+    	.wpcf7-list-item:nth-child(6) .wpcf7-list-item-label {@extend .icon-menu-hoody;}
+    	.wpcf7-list-item:nth-child(7) .wpcf7-list-item-label {@extend .icon-menu-sport;}
+    	.wpcf7-list-item:nth-child(8) .wpcf7-list-item-label {@extend .icon-menu-hat;}
+    	.wpcf7-list-item:nth-child(9) .wpcf7-list-item-label {@extend .icon-menu-polo;}
+    	.wpcf7-list-item:nth-child(10) .wpcf7-list-item-label {@extend .icon-menu-sign;}
+    	.wpcf7-list-item:nth-child(11) .wpcf7-list-item-label {@extend .icon-menu-polo;}
+    	.wpcf7-list-item:nth-child(12) .wpcf7-list-item-label {@extend .icon-menu-fart;}
+    	.wpcf7-list-item:nth-child(13) .wpcf7-list-item-label {@extend .icon-menu-polo;}
+    	.wpcf7-list-item:nth-child(14) .wpcf7-list-item-label {@extend .icon-menu-sign;}
+    	.wpcf7-list-item:nth-child(15) .wpcf7-list-item-label {@extend .icon-menu-swish;}
+    	.wpcf7-list-item:nth-child(16) .wpcf7-list-item-label {@extend .icon-menu-kaska;}
+    	.wpcf7-list-item:nth-child(17) .wpcf7-list-item-label {@extend .icon-menu-swish;}
+    	.wpcf7-list-item:nth-child(18) .wpcf7-list-item-label {@extend .icon-menu-cap;}
+    	.wpcf7-list-item:nth-child(19) .wpcf7-list-item-label {@extend .icon-menu-hoody;}
+    	.wpcf7-list-item:nth-child(20) .wpcf7-list-item-label {@extend .icon-menu-phone;}
+    	.wpcf7-list-item:nth-child(21) .wpcf7-list-item-label {@extend .icon-menu-swish;}
+    	.wpcf7-list-item:nth-child(22) .wpcf7-list-item-label {@extend .icon-menu-stick;}
+    }
+}

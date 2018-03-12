@@ -1,0 +1,236 @@
+.header {
+    &__inner {
+        text-align: center;
+        position: relative;
+        padding: 10px 0;
+        @include mn992 {
+            padding: 30px 0;
+        }
+    }
+    &__top {
+            display: -webkit-flex;
+            display: -moz-flex;
+            display: -ms-flex;
+            display: -o-flex;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        @include mn992 {
+            margin-right: 0;
+        }
+    }
+    &__logo {
+        width: 130px;
+        @include mn768 {
+            width: 200px;
+        }
+        @include mn992 {
+            margin-right: 100px;
+        }
+    }
+    &__inside {
+        @include mn768 {
+            flex: 1 1 auto;
+        }
+    }
+    &__center {
+        @include mn992 {
+            display: -webkit-flex;
+            display: -moz-flex;
+            display: -ms-flex;
+            display: -o-flex;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+    &__tagline {
+        display: none;
+        font-size: 14px;
+        @include mn992 {
+            display: block;
+        }
+        @include mn1200 {
+            font-size: 18px;
+        }
+    }
+    &__tagline {
+        @include mn992 {
+            text-align: left;
+            margin-bottom: 17px;
+        }
+    }
+    &__search {
+        display: none;
+        position: relative;
+        background: #f0f3f5;
+        padding-left: 30px;
+        @include mn992 {
+            display: block;
+            width: 37%;
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            left: 18px;
+            top: 50%;
+            transform: translate(0, -50%);
+            width: 15px;
+            height: 15px;
+            background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAMAAAAMCGV4AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAA0lBMVEUrLS4rLS4rLS4rLS4rLS4rLS4rLS4rLS4rLS4rLS4rLS4rLS4rLS4rLS4rLS4rLS4rLS4rLS4rLS4rLS4rLS4rLS4rLS4rLS4rLS4rLS4rLS4rLS4rLS4rLS4rLS4rLS4rLS4rLS4rLS4rLS4rLS4rLS4rLS4rLS4rLS4rLS4rLS4rLS4rLS4rLS4rLS4rLS4rLS4rLS4rLS4rLS4rLS4rLS4rLS4rLS4rLS4rLS4rLS4rLS4rLS4rLS4rLS4rLS4rLS4rLS4rLS4rLS4rLS7///+sxxG8AAAARHRSTlMAAl6+7vfWhBMS7D4DvfaHOCtk3PMnYDoOyrOGMP0W8jfgRPos107UY/mF2w+T2QEV6swylYHw4tX7TCX82oJNQ0vtpXY8gj8AAAABYktHREWOs6hXAAAACXBIWXMAAAsSAAALEgHS3X78AAAAnUlEQVQI11WOxxKCQBBERzFgQjGhGDAguibALGbt//8mh4WD9mFeva7amSWiRFJJpTNZlaLkFMjkC1KLJWjlil6tod4IvQnNCNlqwwypoBO966LXZ1gYxIuGGPEcw459AofnFLP4joDOmGOxlL7C2mV4PjZbInUH7GVvHIDj6cw/EoEsLuaV5XYXEI9olfd0bJcCLl70Ey7e9Ff4ny+1axTU8eJ6qwAAAABJRU5ErkJggg==');
+        }
+        &-form {
+            position: relative;
+        }
+        &-input {
+            color: #ababab;
+            font-size: 15px;
+            padding: 13px 20px;
+            text-overflow: ellipsis;
+            background: transparent;
+            @include mn1200 {}
+        }
+        &-btn {
+            @include icon-bundle-search;
+            position: absolute !important;
+            right: 0;
+            top: -2px;
+            padding-left: 40px;
+            padding-right: 20px;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            @include mn1200 {
+                padding: 14px 20px 14px 50px;
+            }
+            &::after {
+                left: 15px;
+                @include mn1200 {
+                    left: 21px;
+                }
+            }
+        }
+    }
+    &__right {
+        font-family: 'Futura New';
+        @include mn768 {
+            margin: 0 20px;
+        }
+        @include mn992 {
+            width: 240px;
+            flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            margin: 0;
+            padding-left: 20px;
+        }
+        @include mn1200 {
+            width: 260px;
+        }
+    }
+    &__email,
+    &__tel {
+        display: inline-block;
+        margin: 3px 5px;
+        line-height: 1.2;
+        padding-left: 30px;
+        white-space: nowrap;
+        @include mn992 {
+            margin: 0;
+        }
+    }
+    &__tel {
+        @include icon-bundle-tel;
+        font-size: 18px;
+        font-weight: 700;
+        white-space: nowrap;
+        &:hover {
+            text-decoration: none;
+        }
+        @include mn550 {
+            font-size: 20px;
+        }
+        @include mn992 {
+            margin: 0 10px;
+        }
+        @include mn1200 {
+            font-size: 25px;
+        }
+    }
+    &__email {
+        @include icon-bundle-email-blue;
+        font-size: 18px;
+        font-weight: 300;
+        text-decoration: underline;
+        color: $color1;
+        &:hover {
+            color: $color1;
+            text-decoration: none;
+        }
+    }
+    &__clock {
+        @include icon-bundle-clock;
+        display: none;
+        color: #2b3338;
+        font-family: 'Futura New';
+        font-size: 15px;
+        font-weight: 300;
+        padding-left: 30px;
+        line-height: 1.4;
+        margin-top: 4px;
+        @include mn992 {
+            display: block;
+        }
+    }
+    &__call-btn {
+        width: auto;
+        margin: 5px 0 0;
+        padding: 10px;
+        font-weight: 700;
+        display: none;
+        @include mn1200 {
+            display: inline-block;
+            margin: 0;
+        }
+    }
+}
+
+.mmenu-btn {
+    width: 40px;
+    display: block;
+    text-decoration: none;
+    @include mn992 {
+        display: none;
+    }
+    &:hover {
+        text-decoration: none;
+    }
+    span {
+        display: block;
+        background: $color1;
+        height: 4px;
+        &+span {
+            margin-top: 4px;
+        }
+    }
+}
+
+#breadcrumbs {
+    color: $color1;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    a {
+        color: inherit;
+        text-decoration: underline;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+    .breadcrumb_last {
+        color: #01121c;
+    }
+}

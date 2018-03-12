@@ -1,0 +1,95 @@
+<div class="f-row f-row_title">
+    <div class="b-mega-title">
+        <div class="b-mega-caption">Если у Вас возникли трудности с заполнением формы заказа, сообщите нам об этом.</div>
+        <div class="b-mega-num f-ind-num">Индивидуальный номер Вашего заказа – <span class="ind-number"></span>. Сообщите его менеджеру, если возникнут вопросы.</div>
+    </div>
+</div>
+<div class="f-row f-row_contact">
+    <div class="f-contact-person">
+        <div class="f-label">Представьтесь пожалуйста</div>
+        <div class="f-fields">[select fld-person "Я - Юридическое лицо" "Я - физическое лицо"]</div>
+    </div>      
+    <div class="f-contact-name">
+        <div class="f-label">Имя контактного лица</div>
+        <div class="f-fields">[text fld-name placeholder "Введите имя"]</div>
+    </div>      
+    <div class="f-contact-tel">
+        <div class="f-label">Введите номер телефона*</div>
+        <div class="f-fields">[tel* fld-tel]</div>
+    </div>      
+    <div class="f-contact-email">
+        <div class="f-label">Ваш E-mail*</div>
+        <div class="f-fields">[email* fld-email]</div>
+    </div>      
+    <div class="f-rekv-file">
+        <div class="f-label">Прикрепите реквизиты Вашей организации</div>
+        <div class="f-fields">[file fld-rekv-file limit:10000000 filetypes:jpg|gif|tiff|jpeg|png]<input type="button" class="btn btn_file js-file-btn" value="Прикрепить"><span class="f-file-name"></span>
+        </div>
+    </div>
+</div>
+<div class="title-line_blue"><span>Что будете заказывать?</span></div>
+<div class="f-row f-row_order">
+    <div class="f-services">
+        <div class="f-label">Услуги по нанесению</div>
+        <div class="f-fields">[radio fld-services class:f-services-radio use_label_element "Печать на футболках" "Печать на сигнальной одежде" "Печать на рубашках-поло" "Печать на спортивной одежде" "Печать на толстовках" "Печать на головных уборах" "Печать на свитшотах" "Печать на касках" "Печать на ветровках" "Печать на сумках" "Печать на одежде" "Печать на кружках" "Печать на фартуках" "Печать на чехлах для телефонов" "Печать на спецодежде" "Печать на пазлах" ]</div>
+    </div>
+    <div class="f-products">
+        <div class="f-label">Товары под нанесение</div>
+        <div class="f-fields">[radio fld-products class:f-products-radio use_label_element "Футболки под нанесение" "Ветровки" "Мужские футболки" "Ветровки для печати оптом" "Женские футболки" "Ветровки с капюшоном" "Детские футболки" "Бейсболки" "Рубашки поло оптом" "Одежда под нанесение" "Рубашки-поло" "Фартуки" "Футболки поло" "Сигнальная одежда" "Толстовки для печати оптом" "Каски" "Толстовки" "Кружки" "Толстовки с капюшоном" "Чехлы для телефонов" "Свитшоты" "Наклейки" ]</div>
+    </div>
+    <div class="f-print-size">
+        <div class="f-label">Укажите размер наносимого принта</div>
+        <div class="f-fields">[radio fld-print-size class:f-print-size-radio use_label_element "A6" "A5" "Надпись" "Бейсболка" "A4" "A3" "Другой"]</div>
+    </div>
+    <div class="f-print-place">
+        <div class="f-label">Укажите место нанесения принта</div>
+        <div class="f-fields">[radio fld-print-place class:f-print-place-radio use_label_element "Грудь(середина)" "Грудь(сбоку)" "Спина" "Рукав" "Карман" "Другое"]</div>
+    </div>
+    <div class="f-print-whoose">
+        <div class="f-label">Чьи изделия для печати</div>
+        <div class="f-fields">[radio fld-print-whoose class:f-print-whoose-radio use_label_element "Клиента" "ПромПечать"]</div>
+    </div>
+    <div class="f-print-quality">
+        <div class="f-label">Качество</div>
+        <div class="f-fields">[radio fld-print-quality class:f-print-quality-radio use_label_element "Промо" "Стандарт" "Премиум"]</div>
+    </div>
+    <div class="f-color">
+        <div class="f-label">Цвет</div>
+        <div class="f-fields">[radio fld-color class:f-color-radio use_label_element "Белый" "Голубой" "Синий" "Бордо" "Бежевый" "Желтый" "Зеленый" "Красный" "Оливковый" "Оранжевый" "Серый" "Серый-меланж" "Темно-зеленый" "Темно-синий" "Черный" "Цвет на заказ"]</div>
+    </div>
+    <div class="f-size">
+        <div class="f-label">Размер</div>
+        <div class="f-fields">[radio fld-size class:f-size-radio use_label_element "XS" "S" "M" "L" "XL" "2XL" "3XL" "4XL"]</div>
+    </div>
+    <div class="f-num-date">
+        <div class="f-num">
+            <div class="f-label">Укажите количество товара</div>
+            <div class="f-fields">[number fld-num min:0 max:9999 placeholder "От 1 шт."]</div>
+        </div>
+        <div class="f-date">
+            <div class="f-label">Укажите срок, когда Вам нужен заказ</div>
+            <div class="f-fields">[text fld-date placeholder "ДД.ММ.ГГГ"]</div>
+        </div>
+    </div>
+    <div class="f-print-draw">
+        <div class="f-fields">[checkbox fld-print-draw use_label_element "Мне нужна отрисовка (от 50 руб.)"]</div>
+    </div>
+    <div class="f-print-file">
+        <div class="f-label">Если у Вас есть собственный принт или макет, приложите его фотографию или исходник</div>
+        <div class="f-fields">[file fld-print-file limit:10000000 filetypes:jpg|gif|tiff|jpeg|png]
+            <input type="button" class="btn btn_file js-print-file-btn" value="Прикрепить"><span class="f-print-file-name"></span></div>
+    </div>
+    <div class="f-print-text">[textarea fld-print-text x6 placeholder "Что будем рисовать или разрабатывать"]</div>
+</div>
+<div class="title-line_blue"><span>Доставка и оплата</span></div>
+<div class="f-row f-row_delivery">
+    <div class="f-delivery-method">
+        <div class="f-label">Выберите способ доставки</div>
+        <div class="f-fields">[select fld-delivery "Самовывоз" "Доставка (от 390 руб.)"]<span class="f-delivery-time">с 10:00 до 20:00 без выходных и перерыва на обед</span></div>
+    </div>
+    <div class="f-delivery-adr">[textarea fld-delivery-adr x6 placeholder "Введите полный адрес доставки"]</div>
+    <div class="f-pay">
+        <div class="f-label">Выберите способ оплаты</div>
+        <div class="f-fields">[select fld-pay "Наличный расчет" "Безналичный расчет с НДС" "Безналичный расчет без НДС" "Другой способ"]</div>
+    </div>
+</div>[text indnum class:indnum][submit class:btn_c2 "Заказать"]

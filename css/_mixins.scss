@@ -1,0 +1,174 @@
+// Usage: @include mn550 {}
+$m450-width: 450px;
+$m500-width: 500px;
+$m550-width: 550px;
+$m600-width: 600px;
+$m768-width: 768px;
+$m992-width: 992px;
+$m1024-width: 1024px;
+$m1200-width: 1200px;
+$m1400-width: 1400px;
+$m1600-width: 1600px;
+$m1920-width: 1921px;
+@mixin mn450 {
+    @media (min-width: #{$m450-width}) {
+        @content;
+    }
+}
+
+@mixin mn500 {
+    @media (min-width: #{$m500-width}) {
+        @content;
+    }
+}
+
+@mixin mn550 {
+    @media (min-width: #{$m550-width}) {
+        @content;
+    }
+}
+
+@mixin mn600 {
+    @media (min-width: #{$m600-width}) {
+        @content;
+    }
+}
+
+@mixin mn768 {
+    @media (min-width: #{$m768-width}) {
+        @content;
+    }
+}
+
+@mixin mn768-mx991 {
+    @media (min-width: 768px) and (max-width: 991px) {
+        @content;
+    }
+}
+
+@mixin mn992 {
+    @media (min-width: #{$m992-width}) {
+        @content;
+    }
+}
+
+@mixin mn1024 {
+    @media (min-width: #{$m1024-width}) {
+        @content;
+    }
+}
+
+@mixin mn1200 {
+    @media (min-width: #{$m1200-width}) {
+        @content;
+    }
+}
+
+@mixin mn1400 {
+    @media (min-width: #{$m1400-width}) {
+        @content;
+    }
+}
+
+@mixin mn1920 {
+    @media (min-width: #{$m1920-width}) {
+        @content;
+    }
+}
+
+@mixin mn1600 {
+    @media (min-width: #{$m1600-width}) {
+        @content;
+    }
+}
+
+@mixin text-fade {
+    position: relative; // height: 3.6em; /* exactly three lines */
+    &:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 20px;
+        // background: linear-gradient(to bottom, rgba(255, 255, 255, 0), white 100%);
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0), #f2f2f2 100%);
+    }
+}
+
+/// Stroke font-character
+/// @param  {Integer} $stroke - Stroke width
+/// @param  {Color}   $color  - Stroke color
+/// @return {List}            - text-shadow list
+@function stroke($stroke, $color) {
+    $shadow: ();
+    $from: $stroke*-1;
+    @for $i from $from through $stroke {
+        @for $j from $from through $stroke {
+            $shadow: append($shadow, $i*1px $j*1px 0 $color, comma);
+        }
+    }
+    @return $shadow;
+}
+
+/// Stroke font-character
+/// @param  {Integer} $stroke - Stroke width
+/// @param  {Color}   $color  - Stroke color
+/// @return {Style}           - text-shadow
+@mixin stroke($stroke, $color) {
+    text-shadow: stroke($stroke, $color);
+}
+
+@mixin optional-at-root($sel) {
+    @at-root #{if(not &, $sel, selector-append(&, $sel))} {
+        @content;
+    }
+}
+
+@mixin placeholder {
+    @include optional-at-root('::-webkit-input-placeholder') {
+        @content;
+    }
+
+    @include optional-at-root(':-moz-placeholder') {
+        @content;
+    }
+
+    @include optional-at-root('::-moz-placeholder') {
+        @content;
+    }
+
+    @include optional-at-root(':-ms-input-placeholder') {
+        @content;
+    }
+}
+
+@mixin cf {
+    *zoom: 1;
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+@mixin vert-center {
+    text-align: center;
+    &:after {
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+        width: 0;
+        height: 100%;
+    }
+}
+
+@mixin block-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

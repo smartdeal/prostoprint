@@ -1,0 +1,96 @@
+.sidebar {
+    display: none;
+    font-size: 14px;
+    @include mn1200 {
+        display: block;
+    }
+}
+
+.b-widget {
+    margin-bottom: 40px;
+    &__title {
+        color: black;
+        font-size: 22px;
+        text-transform: uppercase;
+        padding-bottom: 20px;
+        span {
+            font-weight: 900;
+        }
+    }
+}
+
+.b-widget_news {
+    .b-widget__title {
+        color: $color1;
+        font-weight: 900;
+    }
+    .b-news__title {
+        margin-top: 0;
+        font-weight: 700;
+    }
+    .b-news__txt {
+        font-size: 16px;
+    }
+}
+
+.b-news {
+    text-align: center;
+    &__item {
+        text-align: left;
+    }
+    &__body {
+        position: relative;
+        max-height: 160px;
+        overflow: hidden;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+        &:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 30px;
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 100%);
+        }
+    }
+    &__link {
+        display: block;
+        &:hover {
+            text-decoration: none;
+            .b-news__title {
+                text-decoration: none;
+            }
+            .b-news__img {
+                &:before {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    &__img {
+        background: url('') center no-repeat;
+        background-size: cover;
+        height: 325px;
+        margin-bottom: 20px;
+        @include image-more-hover;
+    }
+    &__title {
+        display: block;
+        color: $color1;
+        font-size: 18px;
+        margin: 10px 0 15px;
+        text-decoration: underline;
+    }
+    &__txt {
+        font-size: 14px;
+        line-height: 1;
+    }
+    &__btn_more {
+        display: block;
+        font-size: 13px;
+        font-weight: 700;
+        text-transform: uppercase;
+        padding: 15px 10px;
+    }
+}

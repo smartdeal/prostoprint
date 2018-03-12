@@ -1,0 +1,84 @@
+.b-about-target {
+    &__body {
+        background: #f2f2f2;
+        background-position: left 50px bottom 30px;
+        font-size: 16px;
+        border-radius: 10px;
+        padding: 25px;
+        line-height: 1.4;
+    }
+    &__sing {
+        margin-top: 15px;
+    }
+}
+
+.b-bullet_about {
+    .title-line {
+        span {
+            font-weight: 900;
+        }
+    }
+    .b-bullet__item {
+        @include mn768 {
+            width: 33.33%;
+        }
+        .b-bullet__caption {
+            font-size: 20px;
+        }
+        &_1 {
+            .b-bullet__img {
+                width: 57px;
+                height: 63px;
+                background-position: -318px -23px;
+            }
+        }
+        &_2 {
+            .b-bullet__img {
+                width: 65px;
+                height: 67px;
+                background-position: -375px -23px;
+            }
+        }
+        &_3 {
+            .b-bullet__img {
+                width: 59px;
+                height: 59px;
+                background-position: -440px -23px;
+            }
+        }
+    }
+    .b-bullet__img-wrap {
+        margin-bottom: 10px;
+    }
+}
+
+.content_about {
+    .content__body {
+        margin: 30px 0;
+        padding: 0;
+    }
+    .content__title {
+        color: $color1;
+        span {
+            color: #000;
+        }
+    }
+}
+
+.b-about-target {
+    .title-line {
+        font-weight: 900;
+    }
+}
+
+.b-about-cooperation {
+    border-bottom: 2px solid #f2f2f2;
+    padding-bottom: 30px;
+    &__body {
+        font-size: 18px;
+    }
+}
+
+.b-our-production {
+    border-bottom: 2px solid #f2f2f2;
+}

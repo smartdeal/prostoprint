@@ -1,0 +1,28 @@
+.wsp-pages-title,
+.wsp-posts-title {
+    @extend .title-line;
+}
+
+.wsp-container {
+    li {
+        font-size: 16px;
+        color: $color1;
+    }
+    a {
+        text-decoration: underline;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+    ul ul {
+        padding-left: 1em;
+    }
+}
+
+
+.content_sitemap {
+    .content__title {
+        font-weight: 900;
+        color: $color1;
+    }
+}

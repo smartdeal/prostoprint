@@ -1,0 +1,410 @@
+@charset "UTF-8";
+input {
+    background: #f0f3f5;
+    border-radius: 3px;
+    border: none;
+    padding: 10px 20px;
+    width: 100%;
+}
+
+@mixin mx-btn {
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 100%;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 400;
+    border: 0;
+    padding: 10px 30px;
+    box-shadow: 0 7px 20px rgba(123, 0, 5, 0.3);
+    border-radius: 4px;
+    background-color: #df333a;
+    background-image: linear-gradient(to top, #be2b31 0%, #df333a 100%);
+    color: white;
+    text-align: center;
+    &:hover {
+        opacity: 0.78;
+        background-image: linear-gradient(to top, #df333a 0%, #be2b31 100%);
+        text-decoration: none;
+        color: white;
+    }
+}
+
+.btn {
+    @include mx-btn;
+    &_c2 {
+        @include mx-btn;
+        color: black;
+        box-shadow: 0 9px 20px rgba(100, 87, 0, 0.2);
+        border-radius: 3px;
+        background-color: #fdc300;
+        background-image: linear-gradient(to top, #f1d302 0%, #ffec6a 100%);
+        &:hover {
+            color: black;
+            background-color: #fdc300;
+            background-image: linear-gradient(to top, #ffec6a 0%, #f1d302 100%);
+        }
+    }
+}
+
+.wpcf7 {
+    position: relative;
+    .wpcf7-not-valid-tip {
+        display: none;
+    }
+    input[type="file"]+.wpcf7-not-valid-tip {
+        display: block;
+    }
+    .wpcf7-not-valid {
+        border-bottom: 1px solid;
+        border-color: red !important;
+    }
+    div.wpcf7-response-output {
+        margin: 0;
+        position: absolute;
+        left: 3px;
+        right: 3px;
+        bottom: 3px;
+        background: white;
+        padding: 5%;
+        text-align: center;
+    }
+    .ajax-loader {
+        position: absolute !important;
+    }
+}
+
+.b-form {
+    margin: 30px 0;
+    &__body {
+        padding: 20px 30px 40px;
+    }
+    input,
+    textarea {
+        background: white;
+        border: 1px solid #cdcdcd;
+        padding: 13px 25px;
+        font-size: 16px;
+    }
+    textarea {
+        border-radius: 5px;
+        resize: none;
+    }
+    .wpcf7-submit {
+        @extend .btn;
+        width: auto;
+        font-size: 16px;
+        @include mn768 {
+            padding: 20px 60px;
+        }
+    }
+    &__field_file,
+    label {
+        font-size: 16px;
+        font-weight: 700;
+        display: block;
+        @include mn768 {
+            font-size: 20px;
+        }
+    }
+    input[type=radio] {
+        display: inline-block;
+        vertical-align: middle;
+        padding: 0;
+        width: 31px;
+        height: 31px;
+        opacity: 0;
+        margin: 0;
+    }
+    .wpcf7-form-control-wrap {
+        margin-top: 15px;
+        display: block;
+    }
+    span.wpcf7-list-item {
+        margin: 0 0 10px;
+    }
+    .wpcf7-radio {
+        .wpcf7-list-item {
+            white-space: nowrap;
+        }
+        .wpcf7-list-item-label {
+            position: relative;
+            padding: 0 20px 0 10px;
+            display: inline-block;
+            vertical-align: middle;
+            white-space: normal;
+            &::before {
+                position: absolute;
+                content: '';
+                width: 29px;
+                height: 29px;
+                background-color: white;
+                border: 1px solid #dadada;
+                border-radius: 3px;
+                left: -31px;
+                top: -6px;
+                pointer-events: none;
+            }
+            &::after {
+                position: absolute;
+                content: '';
+                width: 19px;
+                height: 19px;
+                background-color: $color1;
+                border-radius: 3px;
+                left: -25px;
+                top: 0;
+                display: none;
+                pointer-events: none;
+            }
+        }
+        input:checked+.wpcf7-list-item-label:after {
+            display: block;
+        }
+    }
+    &__field {
+        margin-bottom: 20px;
+        font-size: 16px;
+        &_name {}
+        &_msg {
+            @include mn768 {
+                width: 100%;
+                padding-right: 0;
+            }
+        }
+    }
+    &__field_file {
+        .wpcf7-form-control-wrap {
+            &::before {
+                content: 'Прикрепить';
+                position: absolute;
+                left: 0;
+                top: 3px;
+                background: blue;
+                z-index: 1;
+                font-size: 13px;
+                text-align: center;
+                text-transform: uppercase;
+                line-height: 44px;
+                color: white;
+                border-radius: 3px;
+                box-shadow: 0 10px 20px rgba(0, 91, 146, 0.2);
+                pointer-events: none;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                padding: 3px 25px 3px 50px;
+                background: $color1 url() left 18px center no-repeat;
+                background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAMAAAAhxq8pAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAb1BMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8v0wLRAAAAJHRSTlMAG83QkOawQH3JUMBe4IBGyBBIx+jP4rjpAWE7qwTCZ+wnIHKPTSi1AAAAAWJLR0QB/wIt3gAAAAlwSFlzAAALEgAACxIB0t1+/AAAAJZJREFUGNNdzdkSgyAMQNFIXItUVner1v//xwZFZ8p5IbnDAABJGAYsgSDN8nvMs/QaCiyrV1CVWJyR1+L9EDX3rZGKw4Mr2dAhtbH4sEZLAO1Uq9R9UdHiNBgrhGi7q3UtLdZAP/jNjQUZnZ+HHsR5ZZpzMk/nIkKERZEF/uPHf/2JIvo3MYprStY7bvs3sm9wMIyw4wfeHwrJq2oGxwAAAABJRU5ErkJggg==');
+                box-shadow: 0 10px 20px rgba(0, 91, 146, 0.2), 0 3px 0px 0px #ae3035;
+            }
+        }
+        input {
+            opacity: 0;
+            width: 180px;
+        }
+        .fld-print-file {
+            display: inline-block;
+        }
+    }
+}
+
+.f-file-name {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.b-from__body_testimonial,
+.b-from__body_feedback {
+    .b-form {
+        &__inner {
+            @include mn768 {
+                display: flex;
+                flex-wrap: wrap;
+            }
+        }
+        &__half {
+            @include mn768 {
+                width: 50%;
+            }
+            &:first-child {
+                @include mn768 {
+                    padding-right: 40px;
+                }
+            }
+        }
+        &__field {
+            @include mn768 {}
+        }
+        &__field_msg,
+        &__submit-wrap {
+            width: 100%;
+        }
+    }
+}
+
+.b-from__body_feedback {
+    background: #f0f3f5;
+    .b-form__submit-wrap {
+        margin-top: 20px;
+    }
+    textarea {
+        @include mn768 {
+            height: 256px;
+        }
+    }
+    .b-form__field_msg {
+        margin-bottom: 0;
+    }
+}
+
+.b-from__body_testimonial {
+    .b-form {
+        &__body {
+            background: #f2f2f2;
+        }
+        &__field_testimonial {
+            width: 100%;
+        }
+    }
+}
+
+.b-form_vacancy {
+    margin: 0;
+}
+
+.b-from__body_vacancy {
+    background: $color2;
+    @include mn768 {
+        padding: 40px;
+    }
+
+    .b-form {
+        &__title {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 30px;
+            @include mn768 {
+                font-size: 26px;
+            }
+        }
+        &__fields {
+            @include mn768 {
+                display: -webkit-flex;
+                display: -moz-flex;
+                display: -ms-flex;
+                display: -o-flex;
+                display: flex;
+            }
+        }
+        &__col {
+            @include mn768 {
+                width: 50%;
+            }
+            &:first-child {
+                @include mn768 {
+                    padding-right: 40px;
+                }
+            }
+        }
+    }
+    .wpcf7-textarea {
+        @include mn768 {
+            height: 380px;
+        }
+    }
+
+    .wpcf7-submit {
+        background: $color1;
+        box-shadow: 0 10px 20px rgba(0, 91, 146, 0.2), 0 3px 0px 0px #ae3035;
+        background-color: #df333a;
+        color: white;
+        font-size: 12px;
+        padding: 20px;
+        margin: 20px auto 0;
+        display: block;
+        @include mn768 {
+            font-size: 16px;
+            padding: 20px 40px;
+        }
+    }
+}
+
+.b-form_service {
+    .b-form {
+        &__body {
+            background: $color2;
+            padding: 20px;
+            @include mn768 {
+                padding: 30px;
+            }
+        }
+        &__fields {
+            font-size: 0;
+        }
+        &__field {
+            &_name,
+            &_tel,
+            &_email,
+            &_circulation {
+                @include mn768 {
+                    display: inline-block;
+                    vertical-align: top;
+                    width: 50%;
+                    padding-right: 30px;
+                }
+            }
+        }
+        &__field_file {
+            @include mn768 {
+                font-size: 20px;
+            }
+        }
+    }
+    .wpcf7-form-control-wrap {
+        &.time {
+            @include mn768 {
+                width: calc(50% - 30px);
+            }
+        }
+    }
+    .wpcf7-radio .wpcf7-list-item {
+        width: 100%;
+    }
+    .wpcf7-submit {
+        background: $color1;
+        box-shadow: 0 10px 20px rgba(0, 91, 146, 0.2), 0 3px 0px 0px #ae3035;
+        color: white;
+        font-size: 12px;
+        padding: 20px;
+        margin: 20px auto 0;
+        display: block;
+        @include mn768 {
+            font-size: 16px;
+            padding: 20px 70px;
+            margin-left: 0;
+        }
+    }
+}
+
+.popup-form {
+    max-width: 350px;
+    margin: 40px auto;
+    position: relative;
+    background: #f0f3f5;
+    .b-form {
+        &__title {
+            font-size: 28px;
+            font-weight: 700;
+            text-align: center;
+            padding: 20px;
+            background: #ffce47;
+        }
+        &__subtitle {
+            display: block;
+            font-size: .8em;
+        }
+        &__submit-wrap {
+            text-align: center;
+        }
+    }
+}

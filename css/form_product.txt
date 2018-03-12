@@ -1,0 +1,121 @@
+Форма Товар
+
+<div class="f-row f-row_img">
+    <div class="f-col f-col-sm-6">
+        <div class="f-img-wrap">
+            <div class="f-img"></div>
+            <a class="f-one-click-btn js-btn-one-click-product btn_c2" href="#">Заказать в один клик</a>
+            <div class="f-desc"><b>У вас появились вопросы?</b>Оставьте заявку или позвоните по телефону: <a href="tel:84996479053">8 (499) 647-90-53</a> и мы с радостью ответим на них и расскажем о текущих скидках на товар.</div>
+        </div>
+    </div>
+    <div class="f-col f-col-sm-6">
+        <div class="f-price">
+            <div class="f-label">Цена: </div>
+            <div class="f-fields">[radio fld-price class:f-price-radio use_label_element default:1 "(Стандарт)" "(Премиум)"]</div>
+        </div>
+        <div class="f-color">
+            <div class="f-label">Выберите цвет: </div>
+            <div class="f-fields">[radio fld-color class:f-color-radio use_label_element "Белый" "Голубой" "Синий" "Бордо" "Бежевый" "Желтый" "Зеленый" "Красный" "Оливковый" "Оранжевый" "Серый" "Серый-меланж" "Темно-зеленый" "Темно-синий" "Черный" "Цвет на заказ"]</div>
+        </div>
+        <div class="f-size">
+            <div class="f-label">Укажите размер: </div>
+            <div class="f-fields">[radio fld-size class:f-size-radio use_label_element "XS" "S" "M" "L" "XL" "2XL" "3XL" "4XL"]</div>
+        </div>
+        <div class="f-print">
+            <div class="f-label">Вам нужна печать на ФУТБОЛКАХ?</div>
+            <div class="f-fields">[radio fld-print class:f-print-radio use_label_element default:2 "Да" "Нет"]</div>
+        </div>
+    </div>
+</div>
+<div class="f-row f-row_2 f-row_maket">
+    <div class="f-maket__inner">
+        <div class="f-col f-col-sm-6">
+            <div class="f-print-size">
+                <div class="f-label">Укажите размер наносимого принта</div>
+                <div class="f-fields">[radio fld-print-size class:f-print-size-radio use_label_element "A6" "A5" "A4" "A3" "Надпись" "Другой"]</div>
+            </div>
+        </div>
+        <div class="f-col f-col-sm-6">
+            <div class="f-print-place">
+                <div class="f-label">Укажите место нанесения принта</div>
+                <div class="f-fields">[radio fld-print-place class:f-print-place-radio use_label_element "Грудь(середина)" "Грудь(сбоку)" "Спина" "Рукав" "Карман" "Другое"]</div>
+            </div>
+        </div>
+        <div class="f-col">
+            <div class="f-print-draw">
+                <div class="f-fields">[checkbox fld-print-draw use_label_element "Мне нужна отрисовка (от 50 руб.)"]</div>
+            </div>
+            <div class="f-print-file">
+                <div class="f-label">Если у Вас есть собственный принт или макет, приложите его фотографию или исходник</div>
+                <div class="f-fields">[file fld-print-file limit:10000000 filetypes:jpg|gif|tiff|jpeg|png]
+                    <input type="button" class="btn btn_file js-print-file-btn" value="Прикрепить"><span class="f-print-file-name"></span></div>
+            </div>
+            <div class="f-print-text">[textarea fld-print-text x6 placeholder "Что будем рисовать или разрабатывать"]</div>
+        </div>
+    </div>
+</div>
+<div class="title-line_blue"><span>Доставка</span></div>
+<div class="f-row f-row_delivery">
+    <div class="f-col">
+        <div class="f-delivery-method">
+            <div class="f-label">Выберите способ доставки</div>
+            <div class="f-fields">[select fld-delivery "Самовывоз" "Доставка (от 390 руб.)"]<span class="f-delivery-time">с 10:00 до 20:00 без выходных и перерыва на обед</span></div>
+        </div>
+        <div class="f-delivery-adr">[textarea fld-delivery-adr x6 placeholder "Введите полный адрес доставки"]</div>
+        <div class="f-ind-num">Индивидуальный номер Вашего заказа – <span class="ind-number"></span>.<br>Сообщите его менеджеру, если возникнут вопросы.</div>
+    </div>
+</div>
+<div class="f-row f-row_contact">
+    <div class="f-col">
+        <div class="f-contact-person">
+            <div class="f-label">Представьтесь пожалуйста</div>
+            <div class="f-fields">[select fld-person "Я - Юридическое лицо" "Я - физическое лицо"]</div>
+        </div>    	
+        <div class="f-contact-name">
+            <div class="f-label">Имя контактного лица</div>
+            <div class="f-fields">[text fld-name placeholder "Введите имя"]</div>
+        </div>    	
+        <div class="f-contact-tel">
+            <div class="f-label">Введите номер телефона*</div>
+            <div class="f-fields">[tel* fld-tel]</div>
+        </div>    	
+        <div class="f-contact-email">
+            <div class="f-label">Ваш E-mail*</div>
+            <div class="f-fields">[email* fld-email]</div>
+        </div>    	
+        <div class="f-date">
+            <div class="f-label">Укажите срок, когда Вам нужен заказ</div>
+            <div class="f-fields">[text fld-date placeholder "ДД.ММ.ГГГ"]</div>
+        </div>    	
+        <div class="f-info">
+            <div class="f-label">Дополнительная информация</div>
+            <div class="f-fields">[textarea fld-info x6 placeholder "Какую задачу Вы решаете (это будет подарок, обеспечение персонала брендированной продукцией, 
+проведение промо акции, закупка толстовок или футболок…)? Если это нанесение фирменной
+символики, то есть ли у Вас собственные изделия для нанесения?"]</div>
+        </div>    
+[text indnum class:indnum][submit class:btn_c2 "Заказать"]	
+    </div>
+</div>
+
+Номер заказа: [indnum]
+
+Тип клиента: [fld-person]
+Имя: [fld-name]
+Телефон: [fld-tel]
+Email: [fld-email]
+
+Цена: [fld-price]
+Цвет: [fld-color]
+Размер: [fld-size]
+Нужна ли печать?: [fld-print]
+Размер принта: [fld-print-size]
+Место нанесения: [fld-print-place]
+Отрисовка:  [fld-print-draw]
+Что будем рисовать: [fld-print-text]           
+Способ доставки: [fld-delivery]
+Адрес доставки: [fld-delivery-adr]
+Срок: [fld-date]
+Дополнительная информация:
+[fld-info]
+
+

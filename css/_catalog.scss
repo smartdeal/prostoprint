@@ -51,9 +51,14 @@
 
 .content_product,
 .content_service {
-    h3 {
+    h2 {
         @include mn768 {
             font-size: 30px;
+        }
+    }
+    h3 {
+        @include mn768 {
+            font-size: 26px;
         }
     }
 }

@@ -35,7 +35,7 @@
 			</div>
 		</div>
 		<div class="b-widget b-widget_news">
-		    <div class="b-widget__title">Новости</div>
+			<div class="b-widget__title b-widget__title_underline"><a href="/useful/"><span class="red">Новости</span></a></div>
 		    <div class="b-widget__body"><?php the_last_news(3); ?></div>
 		</div>
 	</div>

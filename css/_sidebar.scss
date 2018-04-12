@@ -16,6 +16,12 @@
         span {
             font-weight: 900;
         }
+        &_underline a{
+            text-decoration: underline;
+            &:hover {
+                text-decoration: none;
+            }
+        }
     }
 }
 

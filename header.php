@@ -72,10 +72,14 @@
                         <?php if ($main_tel = get_field('option_tel','option')): ?>
                             <a class="header__tel" href="<?php the_tel_link($main_tel) ?>"><?php echo $main_tel; ?></a>
                         <?php endif; ?>
-                        <div class="header__search">
+                        <div class="header__search js-header-search">
+                            <?php /*
                             <form class="header__search-form" role="search" method="get" action="/">
                                 <input class="header__search-input" type="search" placeholder="Например, сигнальные жилеты" value="" name="s">
                             </form>
+                            */ 
+                            echo do_shortcode('[wpdreams_ajaxsearchlite]');
+                            ?>
                         </div>
                     </div>
                 </div>

@@ -120,9 +120,7 @@ jQuery(function($) {
             }
         });
 
-        $('.js-header-menu').click(function(event) {
-
-        });
+        $('.js-header-search').addClass('opened');
 
         $('.js-btn-accordeon-more, .js-accord-item').click(function(event) {
             event.preventDefault();

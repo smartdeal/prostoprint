@@ -83,7 +83,7 @@ function the_last_news($num){
             $out .= '<div class="b-news__body"><div class="b-news__title">'.get_the_title().'</div><div class="b-news__txt">'.get_the_excerpt().'</div></div>';
             $out .= '</a></div>';
         endwhile;
-        $out .= '<a class="b-news__btn_more btn" href="'.home_url().'/useful/">Смотреть все новости</a></div>';
+        $out .= '<a class="b-news__btn_more btn" href="'.home_url().'/useful/">Смотреть все статьи</a></div>';
     endif;
     wp_reset_postdata();
     echo $out;

@@ -140,7 +140,7 @@
                 left: 10px;
                 right: 10px;
                 background-color: #7f8285;
-                z-index: 5;
+                z-index: 202;
                 display: -webkit-flex;
                 display: -moz-flex;
                 display: -ms-flex;
@@ -161,6 +161,9 @@
                                     max-height: 300px;
                                     margin-top: 10px;
                                 }
+                            }
+                            a {
+                                white-space: normal;
                             }
                         }
                         .sub-menu {

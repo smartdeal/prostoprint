@@ -5192,6 +5192,34 @@ hr {
 .content_service .b-gallery-imgs__img {
   height: 200px; }
 
+.b-the-prices {
+  margin: 30px 0; }
+
+.b-the-price {
+  margin: 30px 0; }
+  .b-the-price__title {
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.2em;
+    margin-bottom: 1em; }
+  .b-the-price__body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; }
+  .b-the-price__img {
+    margin: 0 20px 20px;
+    display: block; }
+  .b-the-price__table table {
+    margin: 0 auto;
+    text-align: center;
+    border-collapse: collapse; }
+  .b-the-price__table tr:nth-child(even) {
+    background: #f5f5f5; }
+  .b-the-price__table td,
+  .b-the-price__table th {
+    padding: 7px 20px;
+    border: 1px solid lightgray; }
+
 .b-grid_catalog .b-grid-item:hover .b-grid-item__caption a {
   text-decoration: underline; }
 .b-grid_catalog .b-grid-item:hover .b-grid-item__img::before {

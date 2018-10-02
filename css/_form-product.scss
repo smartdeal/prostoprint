@@ -2,7 +2,6 @@
 
 $grid-space: 10px;
 
-
 .f-row {
     @include cf;
     margin: 0 (-1)*$grid-space;
@@ -647,6 +646,10 @@ $grid-space: 10px;
             }
         }
     }
+}
+
+.f-ui-form_product-without-size .f-size {
+    display: none;
 }
 
 .content_product {

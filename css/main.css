@@ -2264,6 +2264,9 @@ button.ui-button::-moz-focus-inner {
   .f-ui-form_product .f-print-size .wpcf7-list-item:nth-child(3) {
     margin-right: 90px; } }
 
+.f-ui-form_product-without-size .f-size {
+  display: none; }
+
 .content_product .content__title {
   font-weight: 900;
   margin-bottom: 20px; }
@@ -2860,7 +2863,7 @@ body #ajaxsearchliteres1.asl_r .results .item div.etc, body #ajaxsearchliteres1.
         .side-menu .col .menu-item .sub-menu a:hover {
           background: #adbeca; }
     .side-menu .col .menu-item:hover > .sub-menu {
-      max-height: 300px; }
+      max-height: 1000px; }
   .side-menu .col .current-menu-item {
     background: #db3239;
     color: white; }
@@ -2943,7 +2946,7 @@ body #ajaxsearchliteres1.asl_r .results .item div.etc, body #ajaxsearchliteres1.
     text-transform: uppercase; }
     @media (min-width: 992px) {
       .main-slider__title {
-        font-size: 60px; } }
+        font-size: 50px; } }
   .main-slider__desc {
     font-weight: 300;
     font-size: 18px;
@@ -3841,7 +3844,7 @@ body #ajaxsearchliteres1.asl_r .results .item div.etc, body #ajaxsearchliteres1.
 
 .b-grid_services .b-grid-item__caption {
   margin: 10px 5px;
-  height: 40px;
+  height: 80px;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -3915,7 +3918,7 @@ body #ajaxsearchliteres1.asl_r .results .item div.etc, body #ajaxsearchliteres1.
         opacity: 1; }
   .b-news__img {
     background: url("") center no-repeat;
-    background-size: cover;
+    background-size: contain;
     height: 325px;
     margin-bottom: 20px;
     position: relative; }

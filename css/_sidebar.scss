@@ -76,7 +76,7 @@
     }
     &__img {
         background: url('') center no-repeat;
-        background-size: cover;
+        background-size: contain;
         height: 325px;
         margin-bottom: 20px;
         @include image-more-hover;

@@ -1,5 +1,6 @@
 <?php get_form_product_param(); ?>
-<div class="f-ui-form f-ui-form_product js-form-ui js-form-product">
+
+<div class="f-ui-form f-ui-form_product <?php echo (get_field('product_size_disable')) ? 'f-ui-form_product-without-size' : '' ?> js-form-ui js-form-product">
     <?php echo do_shortcode( '[contact-form-7 id="618" title="Форма заказ товара"]' ); ?>
 </div>
 
